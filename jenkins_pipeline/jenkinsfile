@@ -2,15 +2,12 @@ pipeline {
   agent {
     docker { image 'node:16-alpine' }
   }
-  agent {
-    docker { image 'nginx:latest' }
-  }
   stages {
     stage('Build1') {
       steps {
         sh 'node --version'
       }
-  stage('Build2') {
+      stage('Build2') {
       steps {
         sh 'nginx --version'
         }
