@@ -7,7 +7,7 @@ pipeline {
       steps {
         sh 'node --version'
       }
-      stage('Build2') {
+    stage('Build2') {
       steps {
         sh 'nginx --version'
         }
