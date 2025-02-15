@@ -3,6 +3,9 @@ pipeline {
     docker { image 'node:16-alpine' }
     docker { image 'nginx:latest' }
   }
+  agent {
+    docker { image 'nginx:latest' }
+  }
   stages {
     stage('Build1') {
       steps {
